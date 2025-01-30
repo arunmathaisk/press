@@ -1,7 +1,0 @@
----
-- name: Create Devboxes Directory
-  become: yes
-  become_user: frappe
-  file:
-    dest: /home/frappe/devboxes
-    state: directory

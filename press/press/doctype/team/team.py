@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import os
 from hashlib import blake2b
-from typing import TYPE_CHECKING
 
 import frappe
 from frappe import _
@@ -23,9 +22,6 @@ from press.utils.billing import (
 	process_micro_debit_test_charge,
 )
 from press.utils.telemetry import capture
-
-if TYPE_CHECKING:
-	from press.press.doctype.account_request.account_request import AccountRequest
 
 
 class Team(Document):
@@ -55,7 +51,6 @@ class Team(Document):
 		currency: DF.Link | None
 		database_access_enabled: DF.Check
 		default_payment_method: DF.Link | None
-		devboxes_enabled: DF.Check
 		discounts: DF.Table[InvoiceDiscount]
 		enable_inplace_updates: DF.Check
 		enable_performance_tuning: DF.Check
@@ -117,7 +112,6 @@ class Team(Document):
 		"enable_performance_tuning",
 		"enable_inplace_updates",
 		"servers_enabled",
-		"devboxes_enabled",
 	)
 
 	def get_doc(self, doc):

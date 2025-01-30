@@ -21,7 +21,6 @@
   "is_self_hosted",
   "is_server_renamed",
   "public",
-  "is_devbox_server",
   "billing_section",
   "team",
   "column_break_11",
@@ -261,7 +260,7 @@
    "fieldname": "provider",
    "fieldtype": "Select",
    "label": "Provider",
-   "options": "Generic\nScaleway\nAWS EC2\nOCI\nHetzner",
+   "options": "Generic\nScaleway\nAWS EC2\nOCI",
    "set_only_once": 1
   },
   {
@@ -538,13 +537,6 @@
    "fieldtype": "Table",
    "label": "Mounts",
    "options": "Server Mount"
-  },
-  {
-   "default": "0",
-   "fieldname": "is_devbox_server",
-   "fieldtype": "Check",
-   "label": "Is Devbox Server",
-   "set_only_once": 1
   },
   {
    "default": "0",
